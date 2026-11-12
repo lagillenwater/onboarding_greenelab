@@ -233,6 +233,7 @@ Instead commits happen as described below to facilitate code review.
 Code review is handled through pull requests.
 The process is described briefly below.
 Feel free to ask for guidance if you are uncomfortable with the process.
+
 **We will revoke write access for failing to adhere to these rules.**
 
 1.  Make changes to your code and commit them in your own repository first.
@@ -241,19 +242,67 @@ Feel free to ask for guidance if you are uncomfortable with the process.
 4.  Once at least one lab member has approved your pull request, you or a reviewer may merge your pull request.
 The only exception to this policy is this repository ("onboarding") where, in addition to the above rules, Casey must also approve the pull request.
 
-**Composition of Pull Requests:** Each pull request may contain one or more changesets.
-In keeping with good source control practice, each changeset or commit should contain *all* changes necessary for a particular fix or update.
-In addition, each pull request should relate to no more than one functional area in the code base you are updating.
-Keeping the pull request focused to one area makes it easier for your reviewers to provide thoughtful feedback.
+**Pull request protocol:**
+Adding a feature to a repository involves two steps, each with a corresponding pull request for review:
+1. Feature Specification
+A feature refers to an update in the code repository, whether that be algorithmic changes, updated results, etc..
+A feature should relate to no more than one functional area of the code base.
+Prior to adding a feature to a repository, the lab member should think through the purpose, implementation details, and effects of the feature.
+The lab member should define how they will evaluate the successful implementation and operation of the feature.
+A Feature Specification pull request will consist of a single Feature_Specification markdown (*.md) file that defines the following for the feature:
+* purpose
+A high level, natural language description of the feature and how it aligns with the current code base.
+* implementation
+A description of the proposed implementation.
+This may change during development.
+* evaluation criteria
+What tests for code quality and execution will demonstrate successful implementation?
+What evaluations will show that the feature addresses its purpose?
 
-**Reviewing Pull Requests:** We expect that all lab members will participate in review of pull requests.
-If you get named by the submitter, it's courteous to review the request.
+The reviewer should ensure they understand the proposed feature a summary in the review and provide feedback to improve technical communication.
+
+2. Evaluation of Feature Implementation
+The Evaluation of Feature Implementation pull request includes all changes necessary for the feature implementation. 
+Additionally, this pull request should include an updated specification document (i.e., the same Feature_Specification document so the diff is easy for the reviewer to see )
+* purpose
+This should remain the same.
+* implementation
+An updated description of the implementation, with justification for changes made during development.
+If agentic coding was used, include information on the specific model and skills used (see the Agentic Coding section).
+* evaluation criteria
+This is likely to remain the same, but any updates or additions to the evaluation should be highlighted here.
+* evaluation results
+The evidence that demonstrates that the changes met the evaluation criteria.
+This section should include details on unit test coverage, examples and pointers to any intermediate logs or artifacts produced by the pipeline, and visualizations that will help the reviewer evaluate the feature implementation. 
+If agentic review was used (recommended before PR submission) include details on the model, evaluation skills, and outputs of the final evaluation.
+* sample execution (optional)
+An automated script that implements the feature on a small data subset. 
+
+The reviewer should thoroughly evaluate the changes to the Feature_Specification document to assess drift from the original purpose.
+The reviewer may spot-check scripts for documentation and syntax, but the main focus is on the execution and output artifacts.
 We have created a [checklist](https://github.com/greenelab/onboarding/blob/master/extras/code_review_checklist.md) to facilitate review.
+
+**Agentic Coding:**
+Artificial Intelligence (AI) coding agents (e.g., Codex, Claude code, Github Copilot, OpenCode) automate code development from natural language prompts.
+If using a coding agents, lab members must provide attribution to the specific agent(s) used in development.
+Additionally, lab members must still sign sign their commits, since they are responsible for any code pushed into the Greenelab.
+
+Coding agents develop lines of codes faster than humans.
+Code review agents proficiently identify errors in syntax, linting, documentation, or compiling.
+However, coding agents are prone to drift from the lab member's intent.
+Developing frontier methods that extend beyond the AI training corpus makes self evaluation difficult.
+Therefore, developers are expected to define objective evaluation criteria, such as statistical tests, and include audits of scope drift.  
+
+**Reviewing Pull Requests:** 
+We expect that all lab members will participate in review of pull requests.
+If you get named by the submitter, it's courteous to review the request.
 As a reviewer, you are responsible for making sure that all checklist guidelines are followed.
-**Automated tooling (optional).**
-Repositories may additionally run automated PR review (e.g. CodeRabbit) and coverage reporting (e.g.
-Codecov) — see `extras/automated_review_tooling.md` for what these add and how to set them up.
-These are additive to, not a replacement for, the ≥1-lab-member-approval requirement above.
+We have created a [checklist](https://github.com/greenelab/onboarding/blob/master/extras/code_review_checklist.md) to facilitate review.
+Reviewers are expected to provide feedback on pull requests within 2 business days of being named a reviewer. 
+
+**Pull Request Timing**
+It is difficult to provide a thorough review to a large pull requests that implement multiple features and comes months after the previous pull request.
+Therefore, lab members are expected to submit the evaluation pull request within 2 weeks of the feature specification pull request.
 
 **Projects that didn't work:** We expect that repositories will contain failures (e.g. proof-of-concepts that didn't work).
 This is ideal.

@@ -39,3 +39,21 @@ One reason for this is to aid in readability of `diff` output when performing co
 This means that the seed can be set *and* a default value is specified.
 
 **API error handling** APIs should catch and handle anticipated errors (e.g. key doesn't exist, type mismatch in lookup) by identifying the source of the error (e.g. lookup failed with PK=XYZ) to the caller with as much precision as possible.
+
+**Feature_Specification criteria:**
+* purpose
+Do you understand what this feature does?
+Is it necessary?
+Does it fit with the existing code?
+Are there alternative approaches?
+* implementation
+Is the implementation feasible?
+Are there more efficient alternatives?
+* evaluation criteria
+Is the evaluation criteria sufficient to demonstrate successful implementation?
+Are any additional tests necessary?
+* evaluation results
+Is the evidence convincing?
+Is the provenance of outputs clear?
+* sample execution (optional)
+Does the code execute and produce all outputs?
