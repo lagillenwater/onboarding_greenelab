@@ -245,7 +245,7 @@ The only exception to this policy is this repository ("onboarding") where, in ad
 **Pull request protocol:**
 Adding a feature to a repository involves two steps, each with a corresponding pull request for review:
 1. Feature Specification
-A feature refers to an update in the code repository, whether that be algorithmic changes, updated results, etc..
+A feature refers to an update in the code repository, whether that be algorithmic changes, updated results, etc.
 A feature should relate to no more than one functional area of the code base.
 Prior to adding a feature to a repository, the lab member should think through the purpose, implementation details, and effects of the feature.
 The lab member should define how they will evaluate the successful implementation and operation of the feature.
@@ -259,7 +259,7 @@ This may change during development.
 What tests for code quality and execution will demonstrate successful implementation?
 What evaluations will show that the feature addresses its purpose?
 
-The reviewer should ensure they understand the proposed feature a summary in the review and provide feedback to improve technical communication.
+The reviewer should ensure they understand the proposed feature, summarize it in the review, and provide feedback to improve technical communication.
 
 2. Evaluation of Feature Implementation
 The Evaluation of Feature Implementation pull request includes all changes necessary for the feature implementation. 
@@ -283,11 +283,11 @@ The reviewer may spot-check scripts for documentation and syntax, but the main f
 We have created a [checklist](https://github.com/greenelab/onboarding/blob/master/extras/code_review_checklist.md) to facilitate review.
 
 **Agentic Coding:**
-Artificial Intelligence (AI) coding agents (e.g., Codex, Claude code, Github Copilot, OpenCode) automate code development from natural language prompts.
+Artificial Intelligence (AI) coding agents (e.g., Codex, Claude Code, GitHub Copilot, OpenCode) automate code development from natural language prompts.
 If using a coding agents, lab members must provide attribution to the specific agent(s) used in development.
 Additionally, lab members must still sign sign their commits, since they are responsible for any code pushed into the Greenelab.
 
-Coding agents develop lines of codes faster than humans.
+Coding agents produce lines of code faster than humans.
 Code review agents proficiently identify errors in syntax, linting, documentation, or compiling.
 However, coding agents are prone to drift from the lab member's intent.
 Developing frontier methods that extend beyond the AI training corpus makes self evaluation difficult.
@@ -301,7 +301,7 @@ We have created a [checklist](https://github.com/greenelab/onboarding/blob/maste
 Reviewers are expected to provide feedback on pull requests within 2 business days of being named a reviewer. 
 
 **Pull Request Timing**
-It is difficult to provide a thorough review to a large pull requests that implement multiple features and comes months after the previous pull request.
+It is difficult to provide a thorough review of large pull requests that implement multiple features and arrive months after the previous pull request.
 Therefore, lab members are expected to submit the evaluation pull request within 2 weeks of the feature specification pull request.
 
 **Projects that didn't work:** We expect that repositories will contain failures (e.g. proof-of-concepts that didn't work).

@@ -50,7 +50,7 @@ Are there alternative approaches?
 Is the implementation feasible?
 Are there more efficient alternatives?
 * evaluation criteria
-Is the evaluation criteria sufficient to demonstrate successful implementation?
+Are the evaluation criteria sufficient to demonstrate successful implementation?
 Are any additional tests necessary?
 * evaluation results
 Is the evidence convincing?
